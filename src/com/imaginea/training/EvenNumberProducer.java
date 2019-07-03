@@ -2,7 +2,7 @@ package com.imaginea.training;
 
 public class EvenNumberProducer implements Runnable {
 	NumberPrinter np;
-	int max_limit;
+	public int max_limit;
 	Thread t1;
 
 	EvenNumberProducer(NumberPrinter np, int max_limit) {
@@ -10,7 +10,10 @@ public class EvenNumberProducer implements Runnable {
 		this.max_limit = max_limit;
 		t1=new Thread(this);
 	}
-
+	public EvenNumberProducer()
+	{
+		
+	}
 	public void run() {
 		int count = 2;
 		while (count <= max_limit) {
